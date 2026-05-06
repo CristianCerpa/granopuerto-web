@@ -3,9 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <title>Granopuerto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+        url('fondo.jpg'); /* ← AQUÍ VA TU IMAGEN */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .sub {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* SECCIÓN TEXTO */
+    .section {
+      max-width: 700px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .section p {
+      margin-bottom: 20px;
+    }
+
+    /* DETALLE */
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 12px;
+      color: #777;
+      letter-spacing: 2px;
+    }
+  </style>
 </head>
+
 <body>
-  <img src="logo.png" alt="Granopuerto" style="width:200px;">
-  <p>Café de especialidad</p>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="logo.png" alt="Granopuerto" class="logo"> <!-- ← TU LOGO -->
+
+    <h1>Un viaje en cada taza</h1>
+    <div class="sub">Café de especialidad tostado en Valparaíso</div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="section">
+    <p><strong>Granopuerto no es solo café.</strong></p>
+
+    <p>
+      Es historia, viaje y carácter porteño en cada sorbo.
+    </p>
+
+    <p>
+      Granos seleccionados del mundo, tostados y envasados en Valparaíso.
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    VALPARAÍSO · PACÍFICO · ORIGEN
+  </div>
+
 </body>
 </html>
