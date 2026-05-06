@@ -73,33 +73,33 @@
 
     /* SECTION */
     .section {
-      padding: 120px 20px;
-      max-width: 720px;
-      margin: auto;
+      padding: 140px 20px;
+      max-width: 780px;
+      margin: 0 auto;
       text-align: center;
     }
 
-    .section p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin: 0 0 24px 0;
-      color: #ddd;
-    }
-
-    .section strong {
+    .title {
       font-family: "Georgia", serif;
-      font-size: 22px;
-      color: #fff;
-      letter-spacing: 1px;
+      font-size: 24px;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 28px;
     }
 
     .block {
-      margin-top: 18px;
+      font-size: 18px;
+      line-height: 1.9;
+      letter-spacing: 0.2px;
+      color: #d6d6d6;
+      max-width: 620px;
+      margin: 0 auto;
     }
 
     /* CTA */
     .cta {
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
     .btn {
@@ -110,7 +110,7 @@
       text-decoration: none;
       font-size: 14px;
       letter-spacing: 2px;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
@@ -125,6 +125,21 @@
       font-size: 11px;
       letter-spacing: 4px;
       color: #666;
+    }
+
+    /* RESPONSIVE */
+    @media (min-width: 768px) {
+      .headline {
+        font-size: 60px;
+      }
+
+      .title {
+        font-size: 26px;
+      }
+
+      .block {
+        font-size: 19px;
+      }
     }
 
   </style>
@@ -151,10 +166,10 @@
 
   <!-- CONTENIDO -->
   <section class="section">
-    <p><strong>Granopuerto no es solo café.</strong></p>
+    <p class="title"><strong>Granopuerto no es solo café.</strong></p>
 
     <p class="block">
-      Es historia, viaje y carácter porteño en cada sorbo.<br>
+      Es historia, viaje y carácter porteño en cada sorbo.<br><br>
       Granos seleccionados del mundo, transformados en una experiencia única.
     </p>
 
