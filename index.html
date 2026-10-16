@@ -1,125 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Granopuerto, café de origen tostado y envasado en Valparaíso.">
-  <title>Granopuerto | Café de origen</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Granopuerto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       background: #0e0d0b;
       color: #f2f2f2;
-      font-family: "Cormorant Garamond", Georgia, serif;
+       font-family: "Cormorant Garamond", Georgia, serif;
     }
 
-    a {
-      color: inherit;
-    }
-
-    /* MENÚ */
-
-    .navbar {
-      position: absolute;
-      top: 34px;
-      left: 0;
-      width: 100%;
-      min-height: 65px;
-      padding: 0 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(14, 13, 11, 0.88);
-      z-index: 20;
-      font-family: "Inter", Arial, sans-serif;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: clamp(28px, 7vw, 90px);
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .nav-menu a {
-      display: inline-block;
-      position: relative;
-      padding: 12px 0;
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      transition: color .25s ease;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-      color: #d9a33f;
-    }
-
-    .nav-menu a.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 2px;
-      background: #d9a33f;
-    }
-
-    .cart-link {
-      position: absolute;
-      right: 28px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 12px;
-    }
-
-    .cart-link svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    /* PORTADA ORIGINAL */
-
+    /* HERO */
     .hero {
       height: 100vh;
-      min-height: 580px;
       position: relative;
-      background: transparent;
+ background: transparent;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       text-align: center;
-      padding-top: 105px;
+      padding-top: 10px;
     }
+@media (max-width: 767px) {
 
+  .hero {
+    height: 75vh;
+  }
     .overlay {
       position: absolute;
       inset: 0;
-      background: transparent;
+ background: transparent;
     }
-
+}
     .hero-content {
       position: relative;
       z-index: 2;
@@ -129,29 +50,35 @@
 
     .logo {
       width: 260px;
-      max-width: 75vw;
-      height: auto;
       margin-bottom: 15px;
     }
 
     .headline {
-      font-family: Georgia, serif;
+      font-family: "Georgia", serif;
       font-size: 28px;
       letter-spacing: 3px;
       margin: 0;
       font-weight: 400;
       color: #f2f2f2;
     }
-
+    
     .subheadline {
-      font-family: "Inter", Arial, sans-serif;
+       font-family: "Inter", Arial, sans-serif;
       margin-top: 20px;
       margin-bottom: 70px;
       font-size: 18px;
       color: #cfcfcf;
       letter-spacing: 1px;
     }
+@media (max-width: 767px) {
 
+  .subheadline {
+    font-size: 12px;
+    margin-bottom: 10px;
+      position: relative;
+    top: 50px;
+  }
+}
     .line {
       width: 80px;
       height: 1px;
@@ -159,58 +86,67 @@
       margin: 10px auto;
     }
 
+    /* SECTION */
     .section {
-      padding: 0 20px 30px;
+      padding: 0px 20px 30px;
       max-width: 780px;
-      margin: -250px auto 0;
+      margin: -250px auto 0 auto;
       text-align: center;
-      position: relative;
-      z-index: 5;
+        position: relative;
+  z-index: 5;
       background: transparent;
     }
 
     .title {
-      font-family: Georgia, serif;
+      font-family: "Georgia", serif;
       font-size: 24px;
       line-height: 1.4;
-      letter-spacing: .5px;
-      color: #fff;
+      letter-spacing: 0.5px;
+      color: #ffffff;
       margin-bottom: 18px;
     }
+@media (max-width: 767px) {
 
+  .title {
+    font-size: 22px;
+  }
+}
     .block {
       font-size: 18px;
       line-height: 1.5;
-      letter-spacing: .2px;
+      letter-spacing: 0.2px;
       color: #d6d6d6;
       max-width: 620px;
       margin: 0 auto;
-    }
+}
+@media (max-width: 767px) {
 
+  .block {
+    font-size: 14px;
+  }
+}
     .block p {
-      margin-bottom: 0;
-    }
-
-    .section p:last-of-type {
-      margin-bottom: 40px;
-    }
-
+    margin-bottom: 0px;
+      }
+.section p:last-of-type {
+  margin-bottom: 40px;
+  }
+    
+    /* CTA */
     .cta {
       margin-top: 20px;
     }
 
     .btn {
-      font-family: "Inter", Arial, sans-serif;
+       font-family: "Inter", Arial, sans-serif;
       display: inline-block;
       padding: 12px 26px;
       border: 1px solid #fff;
       color: #fff;
       text-decoration: none;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: 2px;
-      transition: .3s ease;
-      cursor: pointer;
-      background: transparent;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
@@ -218,8 +154,9 @@
       color: #000;
     }
 
+    /* IMAGEN FINAL (NUEVO) */
     .image-section {
-      padding: 40px 20px 20px;
+       padding: 40px 20px 20px;
       text-align: center;
     }
 
@@ -228,11 +165,12 @@
       max-width: 650px;
       height: auto;
       mix-blend-mode: lighten;
-      opacity: .88;
+      opacity: 0.88;
       margin-top: -5px;
     }
 
-    .footer {
+    /* FOOTER */
+    .footer{
       font-family: "Inter", Arial, sans-serif;
       padding: 80px 20px;
       text-align: center;
@@ -241,178 +179,11 @@
       color: #666;
     }
 
-    /* CATÁLOGO */
-
-    #catalogo {
-      display: none;
-      min-height: 100vh;
-      padding-top: 125px;
-      background: #0e0d0b;
-    }
-
-    #catalogo:target {
-      display: block;
-    }
-
-    body:has(#catalogo:target) #inicio {
-      display: none;
-    }
-
-    .catalog-header {
-      text-align: center;
-      padding: 35px 20px 45px;
-    }
-
-    .eyebrow {
-      color: #d9a33f;
-      font-family: "Inter", Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-
-    .catalog-header h1 {
-      margin: 12px 0;
-      font-size: clamp(38px, 5vw, 56px);
-      font-weight: 400;
-    }
-
-    .catalog-header p:last-child {
-      color: #ccc;
-      font-size: 18px;
-    }
-
-    .products {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-      padding: 0 0 70px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .product {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      border: 1px solid rgba(255,255,255,.12);
-      background: #171512;
-    }
-
-    .product-image {
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: #11100e;
-    }
-
-    .product-image img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .product-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 24px;
-    }
-
-    .product-origin {
-      color: #d9a33f;
-      font-family: "Inter", Arial, sans-serif;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      line-height: 1.6;
-    }
-
-    .product-info h2 {
-      font-size: 34px;
-      font-weight: 500;
-      margin: 8px 0 12px;
-    }
-
-    .product-description {
-      color: #d6d0c8;
-      font-size: 17px;
-      line-height: 1.5;
-      margin: 0 0 20px;
-    }
-
-    .product-info h3 {
-      font-size: 19px;
-      font-weight: 500;
-      color: #d9a33f;
-      margin: 12px 0 8px;
-    }
-
-    .product-info p.detail {
-      color: #d6d0c8;
-      font-size: 15px;
-      line-height: 1.45;
-      margin: 4px 0;
-    }
-
-    .product-price {
-      color: #d9a33f;
-      font-family: "Inter", Arial, sans-serif;
-      font-size: 20px;
-      margin: auto 0 18px;
-      padding-top: 24px;
-    }
-
-    .add-cart {
-      width: 100%;
-      min-height: 44px;
-      padding: 12px 8px;
-      border: 1px solid #eee;
-      background: transparent;
-      color: #fff;
-      font-family: "Inter", Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: .25s ease;
-    }
-
-    .add-cart:hover {
-      background: #d9a33f;
-      border-color: #d9a33f;
-      color: #0e0d0b;
-    }
-
-    .cart-message {
-      display: none;
-      width: fit-content;
-      max-width: 90%;
-      margin: 0 auto 25px;
-      padding: 12px 18px;
-      border: 1px solid #d9a33f;
-      color: #f2f2f2;
-      font-family: "Inter", Arial, sans-serif;
-      font-size: 12px;
-    }
-
-    .cart-message.visible {
-      display: block;
-    }
-
-    .catalog-back {
-      text-align: center;
-      padding-bottom: 30px;
-    }
-
     /* RESPONSIVE */
-
     @media (min-width: 768px) {
       .headline {
         font-size: 25px;
-        letter-spacing: 2px;
+         letter-spacing: 2px;
       }
 
       .title {
@@ -421,428 +192,60 @@
 
       .block {
         font-size: 16px;
-        line-height: 1.7;
-        padding: 0 10px;
+            line-height: 1.7;
+    padding: 0 10px;
       }
-
-      .footer {
-        font-size: 9px;
-        letter-spacing: 2px;
-      }
+      
+  .footer {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
     }
 
-    @media (max-width: 767px) {
-      .navbar {
-        top: 0;
-        min-height: 62px;
-        padding: 0 10px;
-      }
-
-      .nav-menu {
-        gap: clamp(14px, 4vw, 25px);
-      }
-
-      .nav-menu a {
-        font-size: 9px;
-        letter-spacing: .7px;
-      }
-
-      .cart-link {
-        right: 10px;
-        gap: 3px;
-      }
-
-      .cart-link svg {
-        width: 19px;
-        height: 19px;
-      }
-
-      .hero {
-        height: 75vh;
-        min-height: 460px;
-        padding-top: 70px;
-      }
-
-      .subheadline {
-        font-size: 12px;
-        margin-bottom: 10px;
-        position: relative;
-        top: 50px;
-      }
-
-      .title {
-        font-size: 22px;
-      }
-
-      .block {
-        font-size: 14px;
-      }
-
-      .products {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .product-image {
-        height: 220px;
-      }
-
-      .product-info {
-        padding: 16px;
-      }
-
-      .product-info h2 {
-        font-size: 27px;
-      }
-
-      .product-description {
-        font-size: 15px;
-      }
-
-      #catalogo {
-        padding-top: 90px;
-      }
-
-      .footer {
-        padding: 55px 15px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .navbar {
-        justify-content: flex-start;
-        padding-right: 42px;
-      }
-
-      .nav-menu {
-        gap: 15px;
-      }
-
-      .nav-menu a {
-        font-size: 8px;
-        letter-spacing: .4px;
-      }
-
-      .cart-link {
-        right: 7px;
-      }
-
-      .logo {
-        width: 220px;
-      }
-
-      .section {
-        margin-top: -170px;
-      }
-
-      .products {
-        grid-template-columns: 1fr;
-        width: min(380px, 90%);
-      }
-
-      .product-image {
-        height: 290px;
-      }
-
-      .product-info {
-        padding: 24px;
-      }
-
-      .product-description {
-        font-size: 17px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- MENÚ PRINCIPAL -->
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
 
-  <header class="navbar">
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#inicio" id="link-inicio" class="active">INICIO</a></li>
-        <li><a href="#catalogo" id="link-cafes">CAFÉS</a></li>
-        <li><a href="#nosotros" id="link-nosotros">NOSOTROS</a></li>
-        <li><a href="#contacto" id="link-contacto">CONTACTO</a></li>
-      </ul>
-    </nav>
+    <div class="hero-content">
+      <img src="logo.png" class="logo">
 
-    <a href="#catalogo" class="cart-link" aria-label="Ver catálogo y carrito">
-      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <path d="M3 5H7L10.2 20.5C10.5 22 11.8 23 13.4 23H24.5C26 23 27.3 22 27.7 20.6L30 12H9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="13" cy="27" r="1.8" fill="currentColor"/>
-        <circle cx="24" cy="27" r="1.8" fill="currentColor"/>
-      </svg>
-      <span id="cart-count">0</span>
-    </a>
-  </header>
+      <div class="line"></div>
 
-  <!-- INICIO -->
-
-  <div id="inicio">
-    <section class="hero">
-      <div class="overlay"></div>
-
-      <div class="hero-content">
-        <img src="logo.png" class="logo" alt="Granopuerto">
-
-        <div class="line"></div>
-
-        <div class="subheadline">
-          Café de origen tostado y envasado en Valparaíso
-        </div>
+      <div class="subheadline">
+       Café de origen tostado y envasado en Valparaíso
       </div>
-    </section>
-
-    <section class="section" id="nosotros">
-      <p class="title"><strong>Granopuerto no es solo café</strong></p>
-
-      <p class="block">
-        Es historia, viaje y carácter porteño en cada sorbo.<br>
-        Granos seleccionados del mundo, transformados en una experiencia única.
-      </p>
-
-      <div class="cta">
-        <a href="#catalogo" class="btn">VER NUESTROS CAFÉS</a>
-      </div>
-    </section>
-
-    <section class="image-section">
-      <img src="valparaiso.png" alt="Valparaíso, origen pacífico">
-    </section>
-
-    <footer class="footer" id="contacto">
-      © 2026 Granopuerto · todos los derechos reservados
-    </footer>
-  </div>
-
-  <!-- CATÁLOGO DE CAFÉS -->
-
-  <main id="catalogo">
-    <section class="catalog-header">
-      <p class="eyebrow">GRANOPUERTO · CAFÉ DE ORIGEN</p>
-      <h1>Nuestros cafés</h1>
-      <p>Desde distintos rincones del mundo, una experiencia única en cada taza.</p>
-    </section>
-
-    <div class="cart-message" id="cart-message" role="status"></div>
-
-    <section class="products">
-
-      <!-- PACÍFICO -->
-
-      <article class="product">
-        <div class="product-image">
-          <img src="bolsa-colombia.png" alt="Bolsa de café PACÍFICO, Colombia">
-        </div>
-
-        <div class="product-info">
-          <div class="product-origin">CAFÉ DE ORIGEN · COLOMBIA</div>
-          <h2>PACÍFICO</h2>
-
-          <p class="product-description">
-            Desde las montañas colombianas, PACÍFICO nos invita a descubrir
-            un café que conecta el origen con cada taza.
-          </p>
-
-          <h3>Características del café</h3>
-          <p class="detail"><strong>Variedad:</strong> Castillo – Caturra</p>
-          <p class="detail"><strong>Altitud:</strong> 1.700–1.900 msnm</p>
-          <p class="detail"><strong>Proceso:</strong> Lavado</p>
-          <p class="detail"><strong>Tostado:</strong> Medio</p>
-
-          <h3>Notas de sabor</h3>
-          <p class="detail">Caramelo, dulce de leche, azúcar morena y frutas maduras.</p>
-
-          <p class="detail"><strong>Ingredientes:</strong> 100% café tostado</p>
-          <p class="detail"><strong>Contenido neto:</strong> 250 g</p>
-
-          <p class="product-price">$15.990 CLP</p>
-
-          <button
-            class="add-cart"
-            type="button"
-            data-id="pacifico"
-            data-name="PACÍFICO"
-            data-price="15990"
-            data-image="bolsa-colombia.png">
-            AGREGAR AL CARRITO
-          </button>
-        </div>
-      </article>
-
-      <!-- ANDINA -->
-
-      <article class="product">
-        <div class="product-image">
-          <img src="bolsa-peru.png" alt="Bolsa de café ANDINA, Perú">
-        </div>
-
-        <div class="product-info">
-          <div class="product-origin">CAFÉ DE ORIGEN · PERÚ</div>
-          <h2>ANDINA</h2>
-
-          <p class="product-description">
-            Desde las tierras peruanas, ANDINA nos invita a descubrir la
-            riqueza de sus montañas y el carácter único de un café nacido en altura.
-          </p>
-
-          <h3>Características del café</h3>
-          <p class="detail"><strong>Variedad:</strong> Por confirmar</p>
-          <p class="detail"><strong>Altitud:</strong> Por confirmar</p>
-          <p class="detail"><strong>Proceso:</strong> Por confirmar</p>
-          <p class="detail"><strong>Tostado:</strong> Por confirmar</p>
-
-          <h3>Notas de sabor</h3>
-          <p class="detail">Por confirmar según las características del café.</p>
-
-          <p class="detail"><strong>Ingredientes:</strong> 100% café tostado</p>
-          <p class="detail"><strong>Contenido neto:</strong> 250 g</p>
-
-          <p class="product-price">$13.990 CLP</p>
-
-          <button
-            class="add-cart"
-            type="button"
-            data-id="andina"
-            data-name="ANDINA"
-            data-price="13990"
-            data-image="bolsa-peru.png">
-            AGREGAR AL CARRITO
-          </button>
-        </div>
-      </article>
-
-      <!-- BAHÍA -->
-
-      <article class="product">
-        <div class="product-image">
-          <img src="bolsa-brasil.png" alt="Bolsa de café BAHÍA, Brasil">
-        </div>
-
-        <div class="product-info">
-          <div class="product-origin">CAFÉ DE ORIGEN · BRASIL</div>
-          <h2>BAHÍA</h2>
-
-          <p class="product-description">
-            Desde las tierras brasileñas, BAHÍA nos invita a descubrir
-            los aromas y sabores de un origen lleno de tradición cafetera.
-          </p>
-
-          <h3>Características del café</h3>
-          <p class="detail"><strong>Variedad:</strong> Por confirmar</p>
-          <p class="detail"><strong>Altitud:</strong> Por confirmar</p>
-          <p class="detail"><strong>Proceso:</strong> Por confirmar</p>
-          <p class="detail"><strong>Tostado:</strong> Por confirmar</p>
-
-          <h3>Notas de sabor</h3>
-          <p class="detail">Por confirmar según las características del café.</p>
-
-          <p class="detail"><strong>Ingredientes:</strong> 100% café tostado</p>
-          <p class="detail"><strong>Contenido neto:</strong> 250 g</p>
-
-          <p class="product-price">$13.990 CLP</p>
-
-          <button
-            class="add-cart"
-            type="button"
-            data-id="bahia"
-            data-name="BAHÍA"
-            data-price="13990"
-            data-image="bolsa-brasil.png">
-            AGREGAR AL CARRITO
-          </button>
-        </div>
-      </article>
-
-    </section>
-
-    <div class="catalog-back">
-      <a href="#inicio" class="btn">VOLVER AL INICIO</a>
     </div>
+  </section>
 
-    <footer class="footer">
-      © 2026 Granopuerto · todos los derechos reservados
-    </footer>
-  </main>
+  <!-- CONTENIDO -->
+  <section class="section">
+    <p class="title"><strong>Granopuerto no es solo café</strong></p>
 
-  <script>
-    const CART_KEY = "granopuerto-carrito";
+    <p class="block">
+      Es historia, viaje y carácter porteño en cada sorbo.<br>
+      Granos seleccionados del mundo, transformados en una experiencia única.
+    </p>
 
-    function leerCarrito() {
-      try {
-        const datos = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
-        return Array.isArray(datos) ? datos : [];
-      } catch {
-        return [];
-      }
-    }
+    <div class="cta">
+      <a href="#" class="btn">PRÓXIMAMENTE TIENDA</a>
+    </div>
+  </section>
 
-    function guardarCarrito(carrito) {
-      localStorage.setItem(CART_KEY, JSON.stringify(carrito));
-      actualizarContador();
-    }
+  <!-- IMAGEN FINAL (NUEVO) -->
+  <section class="image-section">
+    <img src="valparaiso.png" alt="Valparaíso origen pacífico">
+  </section>
 
-    function actualizarContador() {
-      const carrito = leerCarrito();
-      const cantidad = carrito.reduce(
-        (total, producto) => total + producto.cantidad,
-        0
-      );
-
-      document.getElementById("cart-count").textContent = cantidad;
-    }
-
-    function mostrarMensaje(texto) {
-      const mensaje = document.getElementById("cart-message");
-      mensaje.textContent = texto;
-      mensaje.classList.add("visible");
-    }
-
-    document.querySelectorAll(".add-cart").forEach((boton) => {
-      boton.addEventListener("click", () => {
-        const id = boton.dataset.id;
-        const nombre = boton.dataset.name;
-        const precio = Number(boton.dataset.price);
-        const imagen = boton.dataset.image;
-
-        const carrito = leerCarrito();
-        const existente = carrito.find((producto) => producto.id === id);
-
-        if (existente) {
-          existente.cantidad += 1;
-        } else {
-          carrito.push({
-            id,
-            nombre,
-            precio,
-            imagen,
-            cantidad: 1
-          });
-        }
-
-        guardarCarrito(carrito);
-        mostrarMensaje(nombre + " se agregó al carrito.");
-      });
-    });
-
-    function actualizarMenu() {
-      const hash = window.location.hash;
-      const enCatalogo = hash === "#catalogo";
-
-      document.getElementById("link-inicio").classList.toggle("active", !enCatalogo);
-      document.getElementById("link-cafes").classList.toggle("active", enCatalogo);
-      document.getElementById("link-nosotros").classList.remove("active");
-      document.getElementById("link-contacto").classList.remove("active");
-    }
-
-    window.addEventListener("hashchange", actualizarMenu);
-
-    actualizarContador();
-    actualizarMenu();
-  </script>
+  <!-- FOOTER -->
+  <footer class="footer">
+   © 2026 Granopuerto · todos los derechos reservados
+  </footer>
 
 </body>
 </html>
+
